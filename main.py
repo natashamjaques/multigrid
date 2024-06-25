@@ -11,19 +11,15 @@ def parse_args():
   parser.add_argument(
       '--env_name', type=str, default='MultiGrid-Cluttered-Fixed-15x15',
       help='Name of environment.')
-      # domain = ['MultiGrid-DoorKey-6x6-v0', 'highway', 'roundabout', 'fruitgrid']
   parser.add_argument(
-      '--mode', type=str, default='bcaux',
-      help="Name of experiment. Can be 'dqn', 'bcaux', 'basis', 'psiphi', 'copy_bcaux', 'copy_incentive'")
+      '--mode', type=str, default='ppo',
+      help="Name of experiment. Can be 'ppo'")
   parser.add_argument(
       '--debug', action=argparse.BooleanOptionalAction,
       help="If used will disable wandb logging.")
   parser.add_argument(
       '--seed', type=int, default=None,
       help="Random seed.")
-  parser.add_argument(
-      '--with_expert', action='append', nargs=2, metavar=('position', 'path'),
-      help="Load an expert into position (first arg) from path (second arg) Example: '--with_expert 0 /path/to/ckt'")
   parser.add_argument(
       '--keep_training', action=argparse.BooleanOptionalAction,
       help="If used will continue training from previous checkpoint.")
