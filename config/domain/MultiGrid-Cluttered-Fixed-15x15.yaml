@@ -1,0 +1,5 @@
+# MultiGrid Cluttered Parameters 
+domain: "MultiGrid-Cluttered-Fixed-15x15"
+n_episodes: 100000
+eps_decay: 1000000
+eps_end: 0.01
