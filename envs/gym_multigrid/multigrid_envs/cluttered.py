@@ -198,6 +198,18 @@ class ClutteredMultiGridSingle(ClutteredMultiGrid):
                      agent_view_size=5, max_steps=250, **kwargs)
 
 
+class ClutteredMultiGridSingleFixed(ClutteredMultiGridFixed15x15):
+
+  def __init__(self, **kwargs):
+    super().__init__(n_agents=1, **kwargs)
+
+
+class ClutteredMultiGridSingleFixed6x6(ClutteredMultiGridSingleFixed):
+
+  def __init__(self, **kwargs):
+    super().__init__(n_agents=1, size=6, n_clutter=5, **kwargs)
+
+
 class Cluttered40Minigrid(ClutteredMultiGrid):
 
   def __init__(self, **kwargs):
@@ -294,6 +306,17 @@ register(
 register(
     env_id='MultiGrid-Cluttered-Single-v0',
     entry_point=module_path + ':ClutteredMultiGridSingle'
+)
+
+register(
+    env_id='MultiGrid-Cluttered-Fixed-Single-v0',
+    entry_point=module_path + ':ClutteredMultiGridSingleFixed'
+)
+
+
+register(
+    env_id='MultiGrid-Cluttered-Fixed-Single-6x6-v0',
+    entry_point=module_path + ':ClutteredMultiGridSingleFixed6x6'
 )
 
 register(
