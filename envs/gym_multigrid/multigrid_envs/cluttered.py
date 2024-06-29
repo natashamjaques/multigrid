@@ -207,7 +207,7 @@ class ClutteredMultiGridSingleFixed(ClutteredMultiGridFixed15x15):
 class ClutteredMultiGridSingleFixed6x6(ClutteredMultiGridSingleFixed):
 
   def __init__(self, **kwargs):
-    super().__init__(n_agents=1, size=6, n_clutter=5, **kwargs)
+    super().__init__(size=6, n_clutter=5, **kwargs)
 
 
 class Cluttered40Minigrid(ClutteredMultiGrid):
