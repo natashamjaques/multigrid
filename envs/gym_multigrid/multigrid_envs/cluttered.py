@@ -47,8 +47,8 @@ class ClutteredMultiGrid(multigrid.MultiGridEnv):
 class ClutteredMultiGridFixed15x15(ClutteredMultiGrid):
   """A cluttered environment where the walls and goal are fixed, but agents positions change."""
 
-  def __init__(self, n_agents=3, **kwargs):
-    super().__init__(n_agents=n_agents, size=15, n_clutter=30, randomize_goal=False,
+  def __init__(self, n_agents=3, size=15, n_clutter=30, **kwargs):
+    super().__init__(n_agents=n_agents, size=size, n_clutter=n_clutter, randomize_goal=False,
                      agent_view_size=5, max_steps=100, fixed_environment=True, **kwargs)
 
   
