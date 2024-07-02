@@ -14,7 +14,7 @@ class MultiGridNetwork(nn.Module):
             in_channels (int): number of input channels
             n_actions (int): number of outputs
         """
-        super(MultiGridQNetworkKamal, self).__init__()
+        super(MultiGridNetwork, self).__init__()
         self.obs_shape = obs
         self.n_actions = n_actions
         self.n_agents = n_agents
